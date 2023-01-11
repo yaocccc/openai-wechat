@@ -1,0 +1,22 @@
+{
+  "name": "openai-node-stream",
+  "version": "1.0.0",
+  "description": "Streaming example with openai-node",
+  "main": "index.js",
+  "scripts": {
+    "build": "rm -rf ./dist && tsc --downlevelIteration --skipLibCheck --module commonjs --target es6 --outDir dist",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "type": "module",
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@fortaine/openai": "^4.0.1",
+    "tsc": "^2.0.4",
+    "wechaty": "^1.20.2",
+    "wechaty-puppet-wechat": "^1.18.4"
+  },
+  "devDependencies": {
+    "@types/node": "^18.11.18"
+  }
+}
