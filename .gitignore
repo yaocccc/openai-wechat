@@ -9,3 +9,4 @@ logs/
 **/dump.rdb
 **/.DS_Store
 auth.json
+wechat-assistant.memory-card.json
