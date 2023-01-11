@@ -11,6 +11,7 @@ const bot = WechatyBuilder.build({
 });
 // get a Wechaty instance
 
+const starttime = Date.now();
 async function main() {
     bot
         .on("scan", async (qrcode, status) => {
@@ -24,8 +25,10 @@ async function main() {
             console.log(`User ${user} logged in`);
         })
         .on("message", async (message) => {
-            console.log(message)
             console.log(message.text())
+            if (Date.now() - starttime > 1000 * 3) { // 启动3秒后才开始回复
+                return;
+            }
             if (message.self()) {
                 return;
             }
