@@ -26,7 +26,7 @@ async function main() {
         })
         .on("message", async (message) => {
             console.log(message.text())
-            if (Date.now() - starttime > 1000 * 3) { // 启动3秒后才开始回复
+            if (Date.now() - starttime < 1000 * 3) { // 启动3秒后才开始回复
                 return;
             }
             if (message.self()) {
