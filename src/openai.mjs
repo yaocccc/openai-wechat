@@ -5,7 +5,10 @@ import axios from "axios";
 const configuration = new Configuration({
     apiKey: process.env.OPENAI_API_KEY,
 });
-const openai = new OpenAIApi(configuration);
+let openai;
+if (process.env.OPENAI_WEB_API == "") {
+    openai = new OpenAIApi(configuration);
+}
 
 const send_to_openai = async (prompt) => {
     if (process.env.OPENAI_WEB_API != "") {
